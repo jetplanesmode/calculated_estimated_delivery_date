@@ -1,6 +1,6 @@
-# 📦 Calculated Estimated Delivery Date (EDD)
+# 📦 Calculate Estimated Delivery Date (EDD)
 
-The Calculated Estimated Delivery Date (EDD) feature is designed for logistics operations to automatically determine the expected delivery date for all outbound shipments. This ensures consistency, accuracy, and improved planning across the delivery process.
+The Calculate Estimated Delivery Date (EDD) feature is designed for logistics operations to automatically determine the expected delivery date for all outbound shipments. This ensures consistency, accuracy, and improved planning across the delivery process.
 
 ---
 
