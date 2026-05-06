@@ -1,2 +1,2 @@
-# ideal-guacamole
+# Calculated Estimated Delivery Date
 This is for logistics company process the estimated delivery date (EDD) for all outbound deliveries. 
