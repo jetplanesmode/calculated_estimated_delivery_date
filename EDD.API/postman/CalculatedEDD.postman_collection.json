@@ -1,0 +1,93 @@
+{
+  "info": {
+    "_postman_id": "edd-api-collection-001",
+    "name": "Calculated EDD API",
+    "description": "Estimated Delivery Date API (EDD.API). Set the collection variable `baseUrl` to match your run profile (default http://localhost:5139 from launchSettings).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5139"
+    }
+  ],
+  "item": [
+    {
+      "name": "EDD",
+      "item": [
+        {
+          "name": "Calculate EDD",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"origin\": \"NYC\",\n  \"destination\": \"LAX\",\n  \"mode\": \"Ground\",\n  \"serviceType\": \"Standard\",\n  \"pickupDate\": \"2026-05-05T10:00:00.000Z\",\n  \"country\": \"US\",\n  \"carrier\": \"MainFreight\",\n  \"isRural\": false,\n  \"freightPayer\": \"SHIPPER\"\n}"
+            },
+            "url": "{{baseUrl}}/edd/calculate",
+            "description": "Full request shape: origin, destination, mode, serviceType, pickupDate; optional country (holidays), carrier, isRural, freightPayer (rule engine fields).\n\n200: calculatedEdd, baseTransitDays, ruleAddedDays, totalCalendarDaysBeforeAdjustment, appliedRules.\n404: No matching transit_times row."
+          },
+          "response": []
+        },
+        {
+          "name": "Calculate EDD (minimal)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"origin\": \"NYC\",\n  \"destination\": \"LAX\",\n  \"mode\": \"Ground\",\n  \"serviceType\": \"Standard\",\n  \"pickupDate\": \"2026-05-05T10:00:00.000Z\"\n}"
+            },
+            "url": "{{baseUrl}}/edd/calculate",
+            "description": "Only required fields; optional extras default (country omitted, isRural false, carrier/freightPayer null)."
+          },
+          "response": []
+        },
+        {
+          "name": "Calculate EDD — Freight payer rule",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"origin\": \"AUCK\",\n  \"destination\": \"CHCH\",\n  \"mode\": \"Rail\",\n  \"serviceType\": \"Express\",\n  \"pickupDate\": \"2026-05-05T18:00:00.000Z\",\n  \"freightPayer\": \"THIRD_PARTY\",\n  \"carrier\": \"KiwiRail\",\n  \"isRural\": false\n}"
+            },
+            "url": "{{baseUrl}}/edd/calculate",
+            "description": "Example for rules that test field `freightPayer` (equals THIRD_PARTY) or `carrier` / `isRural`."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "OpenAPI (Development only)",
+      "item": [
+        {
+          "name": "Get OpenAPI document",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/openapi/v1.json",
+            "description": "Available when ASPNETCORE_ENVIRONMENT=Development. If 404, check MapOpenApi path for your ASP.NET version."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

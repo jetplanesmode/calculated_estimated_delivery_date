@@ -1,0 +1,18 @@
+@EDD.API_HostAddress = http://localhost:5139
+
+POST {{EDD.API_HostAddress}}/edd/calculate
+Content-Type: application/json
+
+{
+  "origin": "NYC",
+  "destination": "LAX",
+  "mode": "Ground",
+  "serviceType": "Standard",
+  "pickupDate": "2026-05-05T10:00:00.000Z",
+  "country": "US",
+  "carrier": "MainFreight",
+  "isRural": false,
+  "freightPayer": "SHIPPER"
+}
+
+###
