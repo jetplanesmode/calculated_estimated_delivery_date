@@ -221,7 +221,7 @@ function wirePromptBubble(btn) {
 async function loadSampleQuestions(container) {
   const fallbackPlaceholder = "Ask anything…";
   try {
-    const res = await fetch("/data-prompt/sample-questions.json", {
+    const res = await fetch("/data-prompt/prompt-display.json", {
       cache: "no-store",
     });
     if (!res.ok) throw new Error(String(res.status));
