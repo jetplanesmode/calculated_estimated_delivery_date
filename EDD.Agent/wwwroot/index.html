@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EDD Agent</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header__brand">
+        <span class="header__logo" aria-hidden="true"></span>
+        <div>
+          <h1 class="header__title">EDD Agent</h1>
+          <p class="header__subtitle">By Team Impossible Agents</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+    </main>
+
+    <footer class="composer">
+      <div class="composer__starters" id="composer-starters" aria-label="Sample questions"></div>
+      <form id="form" class="composer__form">
+        <label class="sr-only" for="input">Message</label>
+        <textarea
+          id="input"
+          class="composer__input"
+          rows="1"
+          placeholder="Loading sample questions…"
+          autocomplete="off"
+          maxlength="16000"
+        ></textarea>
+        <button type="submit" class="composer__send" id="send">Send</button>
+      </form>
+      <p class="composer__hint">Enter sends · Shift+Enter for newline</p>
+    </footer>
+  </div>
+  <script src="js/app.js?v=2" type="module"></script>
+</body>
+</html>

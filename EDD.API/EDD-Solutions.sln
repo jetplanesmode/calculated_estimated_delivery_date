@@ -5,6 +5,8 @@ VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDD.API", "EDD.API.csproj", "{B6F59C7A-7D95-169D-0051-C2EA9CB0646D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDD.Agent", "..\EDD.Agent\EDD.Agent.csproj", "{C4D8E1F2-3A5B-6C7D-8E9F-0A1B2C3D4E5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B6F59C7A-7D95-169D-0051-C2EA9CB0646D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6F59C7A-7D95-169D-0051-C2EA9CB0646D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6F59C7A-7D95-169D-0051-C2EA9CB0646D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4D8E1F2-3A5B-6C7D-8E9F-0A1B2C3D4E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D8E1F2-3A5B-6C7D-8E9F-0A1B2C3D4E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D8E1F2-3A5B-6C7D-8E9F-0A1B2C3D4E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D8E1F2-3A5B-6C7D-8E9F-0A1B2C3D4E5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

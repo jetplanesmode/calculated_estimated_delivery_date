@@ -1,0 +1,17 @@
+{
+  "inputPlaceholder": "Give me EDD from Auckland to Christ Church using Standard. Pickup date is {{PICKUP_DATE}}. Mode is Transit.",
+  "samples": [
+    {
+      "id": "edd-auckland-express",
+      "label": "Try asking",
+      "prompt": "Give me EDD from Auckland to Christ Church using Standard. Pickup date is {{PICKUP_DATE}}. Mode is Transit.",
+      "ariaLabel": "Insert example: EDD from Auckland to Christ Church using Standard"
+    },
+    {
+      "id": "nz-holidays-regional",
+      "label": "Also try",
+      "prompt": "Give the list of holidays in New Zealand including regional holidays.",
+      "ariaLabel": "Insert example: New Zealand holidays including regional"
+    }
+  ]
+}

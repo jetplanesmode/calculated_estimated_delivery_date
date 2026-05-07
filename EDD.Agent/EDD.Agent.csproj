@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>edd-agent-a1b2c3d4-5e6f-7890-abcd-ef1234567890</UserSecretsId>
+  </PropertyGroup>
+
+</Project>
