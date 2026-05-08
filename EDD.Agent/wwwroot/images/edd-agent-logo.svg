@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="eddStroke" x1="8" y1="6" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6ee7b7"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="eddGlow" x1="24" y1="8" x2="24" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34d399" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="40" height="40" rx="12" fill="#0f1419"/>
+  <rect x="4" y="4" width="40" height="40" rx="12" stroke="url(#eddStroke)" stroke-width="1.25"/>
+  <rect x="4" y="4" width="40" height="40" rx="12" fill="url(#eddGlow)"/>
+
+  <!-- Robot (left) -->
+  <ellipse cx="17" cy="27" rx="9" ry="9.5" fill="#141922" stroke="#6ee7b7" stroke-width="1.05"/>
+  <path d="M17 15v4" stroke="#6366f1" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="17" cy="13.5" r="2" fill="#6366f1"/>
+  <circle cx="13.5" cy="26" r="2.2" fill="#e8ecf4"/>
+  <circle cx="20.5" cy="26" r="2.2" fill="#e8ecf4"/>
+  <circle cx="14.3" cy="25.3" r="0.85" fill="#0f1419"/>
+  <circle cx="21.3" cy="25.3" r="0.85" fill="#0f1419"/>
+  <path d="M13.5 31q3.5 3 7 0" stroke="#8b95a8" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Arms holding calendar -->
+  <path d="M23 29q5-2 9-7" stroke="#6ee7b7" stroke-width="1.35" stroke-linecap="round" fill="none"/>
+  <path d="M24 33q4 1 8-3" stroke="#6ee7b7" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+
+  <!-- Calendar (right, in hands) -->
+  <rect x="26" y="12" width="16" height="21" rx="2.5" fill="#141922" stroke="#6ee7b7" stroke-width="1.1"/>
+  <path d="M29 17h10" stroke="#8b95a8" stroke-width="1" stroke-linecap="round"/>
+  <path d="M29 17v-2.5a1 1 0 011-1h1.8a1 1 0 011 1V17M36 17v-2.5a1 1 0 011-1h1.8a1 1 0 011 1V17" stroke="#6ee7b7" stroke-width="0.85" stroke-linecap="round"/>
+  <circle cx="29.5" cy="21.5" r="1.1" fill="#6ee7b7"/>
+  <circle cx="34" cy="21.5" r="1.1" fill="#6ee7b7"/>
+  <circle cx="38.5" cy="21.5" r="1.1" fill="#6ee7b7"/>
+  <circle cx="29.5" cy="25.5" r="1.1" fill="#6366f1"/>
+  <circle cx="34" cy="25.5" r="1.1" fill="#6366f1"/>
+  <circle cx="38.5" cy="25.5" r="1.1" fill="#6366f1"/>
+</svg>

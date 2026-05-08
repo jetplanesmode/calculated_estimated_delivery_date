@@ -1,0 +1,5 @@
+Instructions: Ignore any notion of prior assistant replies or stored EDD outcomes — they are not included here.
+Extract shipment parameters only from the following USER lines. If the latest user intent is incomplete or ambiguous, respond with incomplete.
+
+--- USER messages (only source of truth) ---
+

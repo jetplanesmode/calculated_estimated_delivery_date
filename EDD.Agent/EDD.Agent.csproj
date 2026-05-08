@@ -7,4 +7,16 @@
     <UserSecretsId>edd-agent-a1b2c3d4-5e6f-7890-abcd-ef1234567890</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\system-prompt\ExtractionSystemPrompt.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\system-prompt\ExtractionUserEnvelope.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\lookup\DepotMasterRows.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

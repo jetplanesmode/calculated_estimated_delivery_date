@@ -64,7 +64,9 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: linear-gradient(145deg, var(--accent), #34d399 45%, #6366f1);
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
   box-shadow: 0 8px 28px rgba(110, 231, 183, 0.25);
 }
 
@@ -233,8 +235,8 @@ body {
 .composer__input {
   flex: 1;
   resize: none;
-  min-height: 48px;
-  max-height: 180px;
+  min-height: 69px;
+  max-height: 259px;
   padding: 0.75rem 1rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -253,7 +255,7 @@ body {
 
 .composer__send {
   flex-shrink: 0;
-  height: 48px;
+  height: 69px;
   padding: 0 1.25rem;
   border: none;
   border-radius: var(--radius);

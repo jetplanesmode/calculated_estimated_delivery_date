@@ -127,7 +127,7 @@ function formatApiError(/** @type {Response} */ res, data, rawText, jsonError) {
 
 function autosize() {
   input.style.height = "auto";
-  input.style.height = `${Math.min(input.scrollHeight, 180)}px`;
+  input.style.height = `${Math.min(input.scrollHeight, 259)}px`;
 }
 
 input.addEventListener("input", autosize);

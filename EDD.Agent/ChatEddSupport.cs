@@ -45,14 +45,21 @@ internal static class ChatEddSupport
 
     /// <summary>
     /// When true, the agent runs the structured EDD pipeline (extract JSON → EDD.API → formatted reply) instead of normal chat.
+    /// Uses the last several <b>user</b> turns together so short follow-ups like "Mode is Transit" still run after an EDD question.
     /// </summary>
     public static bool LooksLikeEddCalculationRequest(IReadOnlyList<ChatMessage> messages)
     {
-        var text = messages.LastOrDefault(m => string.Equals(m.Role, "user", StringComparison.OrdinalIgnoreCase))?.Content ?? "";
-        if (string.IsNullOrWhiteSpace(text))
+        var userBlob = string.Join(
+            '\n',
+            messages
+                .Where(m => string.Equals(m.Role, "user", StringComparison.OrdinalIgnoreCase))
+                .TakeLast(8)
+                .Select(static m => m.Content.Trim()));
+
+        if (string.IsNullOrWhiteSpace(userBlob))
             return false;
 
-        var lower = text.ToLowerInvariant();
+        var lower = userBlob.ToLowerInvariant();
 
         if (lower.Contains("holiday") && !lower.Contains("edd") && !lower.Contains("estimated delivery") && !lower.Contains("delivery date"))
             return false;
@@ -65,7 +72,7 @@ internal static class ChatEddSupport
             return true;
 
         var hasRouteHint = lower.Contains(" from ") || lower.Contains(" to ") || lower.Contains("auck") || lower.Contains("chch")
-            || lower.Contains("christchurch") || lower.Contains("auckland");
+            || lower.Contains("christchurch") || lower.Contains("christ church") || lower.Contains("auckland");
 
         if (hasRouteHint && (lower.Contains("transit") || lower.Contains("express") || lower.Contains("standard")))
             return true;
